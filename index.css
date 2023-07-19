@@ -372,26 +372,26 @@ footer{
 }
 
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 400px){
     .slideLeft1 h1{
-        font-size: 22px;
-        margin:0 0 20px;
+        font-size: 18px;
+        margin:0;
     }
 
     .para {
         text-align: center;
-        font-size: 14px;
+        font-size: 10px;
     }
 
     .freek{
         position:absolute;
         top: 350px;
-        right: 0;
+        right: 10px;
     }
 
     .freek img{
-        margin-top: 40px;
-        height: 230px;
+        margin-top: 20px;
+        height: 150px;
     } 
 }
 
