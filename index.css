@@ -1,0 +1,396 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1)), url('/imgs/free1.jpg') repeat;
+    background-position: fixed;
+    background-size: cover;
+    animation: moveStars 20s linear infinite;
+}
+
+/* Animation to move background image */
+@keyframes moveStars {
+    from {
+        background-position-y: 0%; /* 100 */
+    }
+    to {
+        background-position-y: 100%;
+    }
+} 
+
+.navbars{
+    display: flex;
+    flex-direction:row;
+    justify-items: center;
+    justify-content: space-between;
+}
+.navbars .logo {
+    position: relative;
+    left: 150px;
+}
+.navbars .logo img{
+    height: 120px;
+    
+}
+.navs ul {
+    position: fixed;
+    display: flex;
+    list-style: none;
+    color: grey;
+    padding:8px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    right: 160px;
+    cursor: pointer;
+}
+
+.navs li{
+    margin-right: 30px;
+}
+
+.navs li:hover{
+    color: #fff;
+}
+
+.container{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+}
+
+.freek img{
+    height: 400px;
+    margin-right: 50px;
+}
+
+.heading h1{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 45px;
+    color: white;
+    font-weight: bolder;
+    padding: 0;
+    margin: 0 0 25px;
+}
+
+nav .fas, nav .fat{
+    display: none;
+}
+
+nav .home {
+    display: none;
+}
+
+.slideLeft1 h1{
+    margin-bottom: 2px;
+}
+
+/* Sliding Animations to <h1> and <p>: */
+.slideLeft1 {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideFromLeft1 1s forwards;
+  }
+  
+  @keyframes slideFromLeft1 {
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .slideLeft2 {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideFromLeft2 1s forwards 1s;
+  }
+  
+  @keyframes slideFromLeft2 {
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  /* slideUp Animation to the buttons: */
+  
+  .slideUp {
+    opacity: 0;
+    transform: translateY(100%);
+    animation: slide-Up 1s forwards 2s;
+  }
+  
+  @keyframes slide-Up {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+
+    /* Fade-in Animation to the Cut-Out: */
+  .fadeIn {
+    opacity: 0;
+    animation: fade-In 1s forwards 3s;
+  }
+  
+  @keyframes fade-In {
+    to {
+      opacity: 1;
+    }
+  }
+  
+
+.para {
+    font-size: 22px;
+    color: #fff;
+    margin: 0 0 48px;
+    padding: 10px 0 0;
+}
+
+.buttons {
+    display:flex;
+    gap:50px; 
+}
+.txts {
+    position: relative;
+    margin-left: 50px;
+}
+.txts button {
+    background: #1ADB80;
+    padding: 10px 34px;
+    text-align: center;
+    border-color: #1ADB80;
+    border-radius: 4px;
+    
+} 
+
+.div{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+}
+
+footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    /* background-color: ; */
+    overflow: hidden;
+}
+
+.waves-container{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+.wave1{
+    position: absolute;
+    bottom: 0;
+    width: 200%;
+    height: 90px;
+    background: url('/imgs/wave\ middle.png') repeat-x;
+    animation: waveMove1 10s linear infinite;
+}
+
+.wave2{
+    position: absolute;
+    bottom: 0;
+    width: 200%;
+    height: 90px;
+    background: url('/imgs/wave-bottom.png') repeat-x;
+}
+
+
+.wave3{
+    position: absolute;
+    bottom: 0;
+    width: 200%;
+    height: 90px;   
+    background: url('/imgs/wave\ top.png') repeat-x;
+    animation: waveMove2 10s linear infinite;
+}
+
+
+@keyframes waveMove1 {
+    0%{
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes waveMove2 {
+    0%{
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.arrow img{
+    position: absolute;
+    height: 60px;
+    bottom: 0;
+    right: 0;
+}
+
+@media only screen and (max-width: 900px){ 
+
+    .container{
+        margin-top: 0;
+        display: flex;
+    }
+
+
+    .navbars .logo {
+        position: relative;
+        left: 10px;
+    }
+
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+
+
+    nav .fat{
+        display: inline-block;
+    }
+
+    nav .home {
+        display: block;
+    }
+
+    .navs ul{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 50px;
+        right: -250px; 
+        width: 250px;
+        height: 100vh;
+        background-color: #fff;
+        opacity: 0.9;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    .navs ul.show-sidebar {
+        right: 0;
+      }
+
+    .navs ul li:hover{
+        color: black;
+    }
+
+    .navs ul li{
+        padding: 20px 30px 30px 10px;
+        margin: 5px;
+        font-size: 15px;
+    }
+
+     nav ul .fas{
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        cursor: pointer;
+        color: black;
+    }
+
+    nav .fas{
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        color: #fff;
+    }
+
+    nav ul li .fat, .home {
+        padding-right: 5px;
+        color: black;
+        
+    } 
+
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .slideLeft1{
+        display: flex;
+    }
+
+    .slideLeft1 h1{
+        font-size: 30px;
+        margin:0 0 20px;
+    }
+
+    .para {
+        text-align: center;
+        font-size: 16px;
+        color: #fff;
+        margin: 0 0 25px;
+        padding: 10px 0 0;
+    }
+
+    .buttons {
+        display:flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+
+    .freek{
+        position:absolute;
+        top: 350px;
+        right: 75px;
+    }
+
+    .freek img{
+        margin-top: 40px;
+        height: 300px;
+    } 
+
+}
+
+
+@media only screen and (max-width: 500px){
+    .slideLeft1 h1{
+        font-size: 22px;
+        margin:0 0 20px;
+    }
+
+    .para {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .freek{
+        position:absolute;
+        top: 350px;
+        right: 0;
+    }
+
+    .freek img{
+        margin-top: 40px;
+        height: 230px;
+    } 
+}
+
+
+
+
